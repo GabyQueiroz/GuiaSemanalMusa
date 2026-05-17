@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guia Semanal Musa</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div>
+          <p class="eyebrow">Semana 1 do ciclo de corrida</p>
+          <h1>Guia Semanal Musa</h1>
+          <p class="subtitle">Plano para reduzir gordura, fortalecer, definir sem foco em volume e evoluir para correr 5 km ate outubro.</p>
+        </div>
+        <div class="status-card">
+          <span class="status-label">Meta</span>
+          <strong>57 kg -> 53 kg</strong>
+          <small>1,68 m | corrida 5 km</small>
+        </div>
+      </div>
+      <nav class="tabs" aria-label="Secoes">
+        <button class="tab is-active" data-section="semana">Semana</button>
+        <button class="tab" data-section="corrida">Corrida</button>
+        <button class="tab" data-section="forca">Musculacao</button>
+        <button class="tab" data-section="cardapio">Cardapio</button>
+        <button class="tab" data-section="suplementos">Suplementos</button>
+        <button class="tab" data-section="registro">Registro</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="semana" class="section is-active">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Visao geral</p>
+            <h2>Agenda semanal</h2>
+          </div>
+          <div class="day-filter" id="weekFilter"></div>
+        </div>
+        <div class="notice">O objetivo nao e ganhar volume: cargas moderadas, mais controle, mais mobilidade, cardio diario e deficit leve na alimentacao.</div>
+        <div class="week-grid" id="weekGrid"></div>
+      </section>
+
+      <section id="corrida" class="section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Plano do treinador</p>
+            <h2>Corrida 3x por semana</h2>
+          </div>
+        </div>
+        <div class="run-grid" id="runGrid"></div>
+        <article class="panel">
+          <h3>Dicas do plano</h3>
+          <p><strong>Ritmo leve:</strong> consegue conversar. <strong>Moderado:</strong> respiracao mais ativa, mas controlada. <strong>Forte:</strong> intensidade alta sem perder tecnica. Longo e sem pressa, foco em constancia.</p>
+        </article>
+      </section>
+
+      <section id="forca" class="section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Definir sem aumentar volume</p>
+            <h2>Musculacao e funcional</h2>
+          </div>
+          <div class="day-filter" id="strengthFilter"></div>
+        </div>
+        <div class="training-list" id="strengthList"></div>
+      </section>
+
+      <section id="cardapio" class="section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">57 kg para 53 kg</p>
+            <h2>Alimentacao semanal</h2>
+          </div>
+          <div class="day-filter" id="mealFilter"></div>
+        </div>
+        <div class="notice">Deficit leve, proteina em todas as refeicoes, carboidrato estrategico nos dias de corrida e nada de cortar comida de forma agressiva.</div>
+        <div class="meal-grid" id="mealGrid"></div>
+      </section>
+
+      <section id="suplementos" class="section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Com cautela</p>
+            <h2>O que pode ajudar</h2>
+          </div>
+        </div>
+        <div class="supp-grid" id="suppGrid"></div>
+      </section>
+
+      <section id="registro" class="section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Acompanhamento</p>
+            <h2>Registro da semana</h2>
+          </div>
+          <div class="action-row">
+            <button class="secondary" id="exportJson">Exportar JSON</button>
+            <label class="secondary file-button" for="importJson">Importar JSON</label>
+            <input id="importJson" type="file" accept="application/json,.json">
+            <button class="secondary danger" id="resetRecords">Limpar registros</button>
+          </div>
+        </div>
+        <div class="tracker-layout">
+          <article class="panel wide">
+            <h3>Medidas semanais</h3>
+            <div class="bio-grid">
+              <label>Data<input data-bio="date" type="date"></label>
+              <label>Peso<input data-bio="weight" placeholder="57,0"></label>
+              <label>Cintura<input data-bio="waist" placeholder="cm"></label>
+              <label>Quadril<input data-bio="hip" placeholder="cm"></label>
+              <label>Gordura (%)<input data-bio="fat" placeholder="opcional"></label>
+              <label>Energia 1-10<input data-bio="energy" placeholder="1-10"></label>
+            </div>
+            <label class="full-label">Observacoes<textarea data-bio="notes" rows="3" placeholder="Sono, ciclo, fome, dores, disposicao..."></textarea></label>
+          </article>
+          <article class="panel wide">
+            <h3>Treino feito</h3>
+            <div id="workoutLog"></div>
+          </article>
+          <article class="panel wide">
+            <h3>Alimentacao feita</h3>
+            <div id="foodLog"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
