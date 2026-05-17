@@ -106,6 +106,7 @@ main {
 }
 .section-title h2 { margin: 0; font-size: clamp(26px, 3vw, 38px); }
 .day-filter { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.record-filter { justify-content: flex-start; margin: -4px 0 16px; }
 .chip { padding: 8px 13px; }
 .chip.is-active { border-color: var(--accent-dark); background: var(--accent); color: #fff; }
 

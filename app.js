@@ -64,11 +64,16 @@ const DATA = {
     run("Treino 3 - Longo", "Sexta", ["1 km caminhando aquecimento", "3,5 km leve", "1 km caminhando respirando e curtindo seu momento de vitoria"], "Longo sem pressa, foco em constancia.")
   ],
   supplements: [
-    ["Cafeina", "Pode ajudar energia e desempenho. Use dose baixa antes do treino se voce tolera cafe, evitando a noite.", "Evitar se tiver ansiedade, pressao alta, arritmia, gastrite forte ou sensibilidade."],
-    ["Proteina", "Whey ou iogurte/ovos/frango ajudam a bater proteina sem exagerar calorias.", "Nao emagrece sozinho; serve para preservar massa magra."],
-    ["Creatina", "Pode ajudar forca e recuperacao sem ser queimador de gordura. Pode aumentar peso na balanca por agua muscular.", "Se a balanca te desmotiva, alinhar expectativa antes."],
-    ["Cha/cafe sem acucar", "Ajuda rotina, hidratacao e controle de vontade de doce.", "Nao substitui refeicao nem sono."],
-    ["Evitar termogenicos agressivos", "Muitos prometem acelerar metabolismo, mas podem dar taquicardia, ansiedade e atrapalhar sono.", "Melhor custo-beneficio: deficit leve, proteina, passos, sono e consistencia."]
+    ["Banana", "Boa antes da corrida: carboidrato facil, potassio e energia rapida. Use 1 banana 30-60 min antes.", "Se pesar no estomago, coma metade ou deixe para treinos mais longos."],
+    ["Mamao, laranja, kiwi e frutas vermelhas", "Ajudam fibras, vitaminas e recuperacao. Otimas no cafe ou lanche.", "Evite transformar em suco grande; a fruta inteira sacia mais."],
+    ["Cafe ou cafeina", "Pode melhorar energia e percepcao de esforco. Cafe simples 30-45 min antes pode bastar.", "Evitar a noite e evitar se der ansiedade, taquicardia, gastrite ou pressao alta."],
+    ["Agua + pitada de sal ou agua de coco", "Ajuda folego e disposicao quando o treino tem suor. Boa em dias de corrida/intervalado.", "Nao precisa exagerar: use principalmente em calor ou treino longo."],
+    ["Carboidrato estrategico", "Para correr melhor: banana, pao, aveia, batata ou arroz em porcao pequena perto do treino.", "Cortar carbo demais piora folego, humor e desempenho."],
+    ["Proteina", "Whey, iogurte, ovos, frango ou peixe ajudam a preservar massa magra enquanto emagrece.", "Nao e queimador de gordura; funciona dentro do plano alimentar."],
+    ["Creatina", "Ajuda forca e recuperacao; pode ser util mesmo sem foco em volume.", "Pode subir peso na balanca por agua muscular. Se isso incomodar, avaliar com profissional."],
+    ["Cha verde ou mate sem acucar", "Pode ajudar rotina, foco e vontade de doce; efeito leve.", "Cuidado com cafeina total do dia e sono."],
+    ["Sono e respiracao", "Dormir bem aumenta energia, recuperacao e controle de fome. Respiracao nasal leve nos treinos faceis ajuda folego.", "Sono ruim sabota queima de gordura mais que falta de suplemento."],
+    ["Evitar termogenicos agressivos", "Prometem acelerar metabolismo, mas podem dar taquicardia, ansiedade e piorar sono.", "Melhor custo-beneficio: deficit leve, proteina, cardio, passos e consistencia."]
   ]
 };
 
@@ -118,7 +123,7 @@ function bindTabs() {
 
 function renderFilters() {
   const buttons = [{ id: "todos", label: "Todos" }, ...DATA.days.map(({ id, label }) => ({ id, label }))];
-  ["weekFilter", "strengthFilter", "mealFilter"].forEach((target) => {
+  ["weekFilter", "strengthFilter", "mealFilter", "recordFilter"].forEach((target) => {
     $(`#${target}`).innerHTML = buttons.map((day) => `<button class="chip ${day.id === state.day ? "is-active" : ""}" data-day="${day.id}">${day.label}</button>`).join("");
     $(`#${target}`).addEventListener("click", (event) => {
       const button = event.target.closest("button");
@@ -250,7 +255,7 @@ function renderBio() {
 }
 
 function renderWorkoutLog() {
-  $("#workoutLog").innerHTML = DATA.days.map((day) => `
+  $("#workoutLog").innerHTML = selectedDays().map((day) => `
     <div class="log-day">
       <h4>${day.label} - ${day.title}</h4>
       <div class="log-row">
@@ -265,7 +270,7 @@ function renderWorkoutLog() {
 }
 
 function renderFoodLog() {
-  $("#foodLog").innerHTML = DATA.days.map((day) => {
+  $("#foodLog").innerHTML = selectedDays().map((day) => {
     const meal = mealRecord(day.id);
     return `
       <div class="food-note">
