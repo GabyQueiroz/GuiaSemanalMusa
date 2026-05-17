@@ -181,6 +181,25 @@ main {
   background: #f7fdfd;
   border-bottom: 1px solid var(--line);
 }
+
+.training-day header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.training-context {
+  display: grid;
+  gap: 4px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #ecfbfb;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.training-context strong {
+  color: var(--accent-dark);
+}
 .exercise {
   display: grid;
   grid-template-columns: 1fr minmax(180px, 260px);

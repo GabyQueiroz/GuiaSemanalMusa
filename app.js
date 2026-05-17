@@ -8,49 +8,54 @@ const DATA = {
     goalRun: "Correr 5 km ate outubro"
   },
   days: [
-    day("seg", "Segunda", "Corrida leve + superior/core", "Queimar gordura, melhorar resistencia e fortalecer sem volume", "Corrida 1", ["1 km caminhando (aquecimento)", "3 km leve", "1 km caminhando para desacelerar"], [
-      ex("Puxada alta na polia", "3", "15", "Placa leve/moderada", "Costas e postura para corrida. Cotovelos descem, sem jogar o corpo para tras.", "Polia alta"),
-      ex("Chest press", "3", "15", "Placa leve/moderada", "Peito e triceps sem buscar falha. Movimento controlado.", "Chest press"),
-      ex("Remada unilateral no banco", "3", "12 cada lado", "Halter leve", "Costas e postura. Apoie no banco e puxe o cotovelo para o quadril.", "Banco + halter"),
-      ex("Prancha + dead bug", "3", "30s + 10 cada lado", "Peso corporal", "Core firme, sem aumentar carga abdominal.", "Solo/banco"),
-      ex("Mobilidade final", "1", "8 min", "Leve", "Quadril, panturrilha e posterior para recuperar da corrida.", "Solo")
+    day("seg", "Segunda", "Corrida 1 + musculacao complementar superior", "Queimar gordura e proteger postura sem cansar pernas depois da corrida", "Corrida fixa", ["1 km caminhando (aquecimento)", "3 km leve", "1 km caminhando para desacelerar", "Depois: musculacao superior curta, sem falha"], [
+      ex("Puxada alta na polia", "2", "18", "Placa 1-2", "Costas e postura para correr melhor. Cotovelos descem, peito aberto.", "Polia alta", "30-40s"),
+      ex("Chest press", "2", "18", "Placa 1-2", "Fortalece peito e triceps sem aumentar volume. Pare com 3 repeticoes sobrando.", "Chest press", "30-40s"),
+      ex("Remada unilateral no banco", "2", "15 cada lado", "Halter leve", "Costas e postura. Apoie mao e joelho no banco, puxe o cotovelo para o quadril.", "Banco + halter", "30s"),
+      ex("Triceps na polia", "2", "18", "Placa 1", "Braco definido, cotovelos parados, movimento controlado.", "Polia", "30s"),
+      ex("Prancha + dead bug", "3", "30s + 10 cada lado", "Peso corporal", "Core firme para corrida, sem carga abdominal.", "Solo", "30s")
     ], meals("Ovos + fruta + cafe", "Iogurte natural ou fruta", "Frango/peixe + arroz pequeno + salada grande", "Banana antes da corrida", "Omelete ou peixe + legumes", "Cha sem acucar ou iogurte")),
-    day("ter", "Terca", "Cardio diario + pernas leves", "Gasto calorico com resistencia muscular, sem hipertrofia", "Aerobico leve", ["Esteira ou bike 35-45 min em ritmo leve/moderado"], [
-      ex("Bike spinning ou esteira", "1", "35-45 min", "Leve/moderado", "Cardio continuo: consegue falar frases curtas.", "Bike/Esteira"),
-      ex("Cadeira extensora", "3", "18", "Placa leve", "Coxa definida sem carga alta. Suba controlando e desca devagar.", "Cadeira extensora"),
-      ex("Cadeira flexora sentada", "3", "18", "Placa leve", "Posterior de coxa. Quadril preso no banco, sem impulso.", "Cadeira flexora"),
-      ex("Abdutora/adutora", "2", "20 cada", "Placa leve", "Quadril e estabilidade. Movimento curto e controlado.", "Abdutora/adutora"),
-      ex("Ponte de gluteo no banco", "3", "15", "Peso corporal", "Ativar gluteo sem carga alta.", "Banco")
+    day("ter", "Terca", "Pernas definicao + aerobico diario", "Aumentar gasto calorico e resistencia das pernas sem carga pesada", "Aerobico + maquinas", ["Esteira ou bike 35-45 min em ritmo leve/moderado", "Depois: circuito de pernas nas maquinas"], [
+      ex("Cadeira extensora", "3", "20", "Placa 1-2", "Coxa definida sem carga alta. Suba controlando e desca em 2 segundos.", "Cadeira extensora", "30s"),
+      ex("Cadeira flexora sentada", "3", "20", "Placa 1-2", "Posterior de coxa. Quadril preso no banco, sem impulso.", "Cadeira flexora", "30s"),
+      ex("Abdutora", "3", "20", "Placa 1-2", "Lateral de gluteo e estabilidade do quadril para corrida.", "Abdutora/adutora", "25-30s"),
+      ex("Adutora", "3", "20", "Placa 1-2", "Interno de coxa com controle, sem bater peso.", "Abdutora/adutora", "25-30s"),
+      ex("Ponte de gluteo no banco", "3", "18-20", "Peso corporal", "Ativar gluteo sem carga alta e sem buscar hipertrofia.", "Banco", "30s"),
+      ex("Panturrilha em pe", "3", "20", "Peso corporal ou halter leve", "Fortalece panturrilha para corrida. Subida e descida lentas.", "Halteres", "30s")
     ], meals("Iogurte + aveia + fruta", "Castanhas pequenas", "Carne magra + batata doce + salada", "Fruta", "Sopa proteica ou salada com frango", "Agua + cha")),
-    day("qua", "Quarta", "Intervalado + superior leve", "Acelerar condicionamento e manter massa magra", "Corrida 2", ["1 km caminhando para aquecer", "5x (1 min forte + 2 min leve)", "1 km caminhando"], [
-      ex("Aquecimento articular", "1", "8 min", "Leve", "Tornozelo, quadril e ombro antes do intervalado.", "Solo"),
-      ex("Puxada alta na polia", "2", "15", "Placa leve", "Reforco de costas sem cansar demais.", "Polia alta"),
-      ex("Triceps na polia", "2", "15", "Placa leve", "Braco definido, cotovelos parados.", "Polia"),
-      ex("Elevacao lateral", "2", "15", "Halter leve", "Ombro com postura, sem roubar.", "Halteres"),
-      ex("Prancha lateral", "2", "25-30s cada lado", "Peso corporal", "Core e estabilidade para corrida.", "Solo")
+    day("qua", "Quarta", "Corrida intervalada + superior leve", "Melhorar velocidade e condicionamento, com musculacao curta de manutencao", "Corrida fixa", ["1 km caminhando para aquecer", "5x (1 min forte + 2 min leve)", "1 km caminhando", "Depois: superior leve e core"], [
+      ex("Chest press", "2", "15-18", "Placa 1", "Leve, sem falha. So para fortalecer e manter postura.", "Chest press", "30s"),
+      ex("Puxada alta na polia", "2", "15-18", "Placa 1", "Costas, postura e ombros longe das orelhas.", "Polia alta", "30s"),
+      ex("Elevacao lateral", "2", "15", "Halter leve", "Ombro definido, sem impulso.", "Halteres", "30s"),
+      ex("Rosca biceps com halteres", "2", "15", "Halter leve", "Controle total, sem balancar.", "Halteres", "30s"),
+      ex("Prancha lateral", "2", "25-30s cada lado", "Peso corporal", "Core e estabilidade para corrida.", "Solo", "30s")
     ], meals("Pao integral + ovo + fruta", "Iogurte", "Frango + feijao pequeno + salada", "Banana ou cafe antes do treino", "Peixe/frango + legumes + arroz pequeno", "Ceia leve se houver fome")),
-    day("qui", "Quinta", "Pernas metabolico + cardio", "Definir pernas e preservar energia para o longo", "Aerobico leve", ["Esteira inclinada leve ou bike 30-40 min"], [
-      ex("Esteira inclinada leve", "1", "30-40 min", "Caminhada rapida", "Sem exaurir as pernas.", "Esteira"),
-      ex("Cadeira extensora", "3", "15-18", "Placa leve/moderada", "Resistencia muscular, sem falha.", "Cadeira extensora"),
-      ex("Cadeira flexora sentada", "3", "15-18", "Placa leve/moderada", "Posterior forte para corrida.", "Cadeira flexora"),
-      ex("Afundo parado sem carga ou halter leve", "2", "12 cada perna", "Peso corporal/halter leve", "Controle e equilibrio, sem buscar volume.", "Halteres"),
-      ex("Alongamento", "1", "8 min", "Leve", "Posterior, panturrilha e gluteo.", "Solo")
+    day("qui", "Quinta", "Circuito metabolico corpo todo", "Queimar gordura com maquinas, fortalecer sem volume e preparar para o longo", "Aerobico + circuito", ["Esteira inclinada leve ou bike 30-40 min", "Depois: circuito nas maquinas, 3 voltas"], [
+      ex("Cadeira extensora", "3", "18", "Placa 1-2", "Quadriceps com resistencia, sem travar joelho.", "Cadeira extensora", "20-30s"),
+      ex("Cadeira flexora sentada", "3", "18", "Placa 1-2", "Posterior forte para corrida, sem impulso.", "Cadeira flexora", "20-30s"),
+      ex("Chest press", "3", "15", "Placa 1-2", "Empurrar com controle, sem falha muscular.", "Chest press", "20-30s"),
+      ex("Puxada alta na polia", "3", "15", "Placa 1-2", "Puxar ate o alto do peito, tronco estavel.", "Polia alta", "20-30s"),
+      ex("Abdutora/adutora", "2", "20 cada", "Placa 1", "Estabilidade de quadril e definicao.", "Abdutora/adutora", "20-30s"),
+      ex("Dead bug", "3", "10 cada lado", "Peso corporal", "Core sem sobrecarregar lombar.", "Solo", "30s")
     ], meals("Vitamina proteica simples", "Fruta", "Ovos/frango + salada + carbo pequeno", "Iogurte ou fruta", "Carne magra + legumes", "Cha")),
-    day("sex", "Sexta", "Longo + mobilidade", "Construir base para 5 km sem pressa", "Corrida 3", ["1 km caminhando aquecimento", "3,5 km leve", "1 km caminhando respirando e curtindo"], [
-      ex("Ativacao pre-corrida", "1", "6 min", "Leve", "Mobilidade + caminhada antes do longo.", "Solo/Esteira"),
-      ex("Corrida longa do plano", "1", "5,5 km total", "Leve", "Fazer exatamente o treino de corrida do dia.", "Esteira ou rua"),
-      ex("Core rapido", "2", "30s", "Peso corporal", "Prancha + dead bug, somente controle.", "Solo"),
-      ex("Soltura pos-corrida", "1", "10 min", "Leve", "Panturrilha, quadril e posterior.", "Solo")
+    day("sex", "Sexta", "Corrida longa + recuperacao ativa", "Construir base para correr 5 km ate outubro sem sobrecarregar musculatura", "Corrida fixa", ["1 km caminhando aquecimento", "3,5 km leve", "1 km caminhando respirando e curtindo", "Depois: mobilidade e core leve"], [
+      ex("Mobilidade pre-corrida", "1", "6-8 min", "Leve", "Tornozelo, quadril, posterior e panturrilha antes do longo.", "Solo/Esteira", "-"),
+      ex("Prancha", "2", "30s", "Peso corporal", "Somente estabilidade, sem cansar demais.", "Solo", "30s"),
+      ex("Dead bug", "2", "10 cada lado", "Peso corporal", "Controle abdominal e lombar protegida.", "Solo", "30s"),
+      ex("Alongamento pos-corrida", "1", "10 min", "Leve", "Panturrilha, quadril e posterior para recuperar.", "Solo", "-")
     ], meals("Aveia + iogurte + banana", "Fruta", "Frango/peixe + arroz + salada", "Banana antes do longo", "Jantar com proteina + legumes + carbo pequeno", "Hidratacao")),
-    day("sab", "Sabado", "Funcional na academia", "Gasto calorico e definicao geral", "Aerobico moderado", ["Bike ou esteira 35-45 min continuo"], [
-      ex("Bike spinning ou esteira", "1", "35-45 min", "Moderado", "Cardio continuo sem sprint.", "Bike/Esteira"),
-      ex("Circuito maquinas", "3", "15 cada", "Leve/moderado", "Chest press + puxada alta + extensora + flexora em sequencia.", "Maquinas"),
-      ex("Abdutora/adutora", "2", "20 cada", "Leve", "Estabilidade de quadril.", "Abdutora/adutora"),
-      ex("Mobilidade", "1", "10 min", "Leve", "Recuperar para a semana.", "Solo")
+    day("sab", "Sabado", "Funcional com aparelhos da academia", "Gasto calorico alto, definicao geral e resistencia muscular", "Aerobico + funcional", ["Bike ou esteira 35-45 min continuo", "Depois: circuito funcional com aparelhos, 3 voltas"], [
+      ex("Bike spinning ou esteira", "1", "35-45 min", "Moderado", "Cardio continuo sem sprint.", "Bike/Esteira", "-"),
+      ex("Cadeira extensora", "3", "15", "Placa 1-2", "Parte do circuito, sem falhar.", "Cadeira extensora", "20s"),
+      ex("Cadeira flexora sentada", "3", "15", "Placa 1-2", "Parte do circuito, controle total.", "Cadeira flexora", "20s"),
+      ex("Chest press", "3", "15", "Placa 1-2", "Parte do circuito superior.", "Chest press", "20s"),
+      ex("Puxada alta na polia", "3", "15", "Placa 1-2", "Parte do circuito superior.", "Polia alta", "20s"),
+      ex("Abdutora", "3", "20", "Placa 1", "Finaliza com estabilidade de quadril.", "Abdutora/adutora", "20s")
     ], meals("Ovos + fruta", "Iogurte", "Prato livre controlado: proteina + salada + carbo", "Fruta", "Jantar leve com proteina", "Agua")),
-    day("dom", "Domingo", "Recuperacao ativa", "Manter movimento, reduzir estresse e preparar marmitas", "Leve", ["Caminhada ou bike leve 30 min"], [
-      ex("Caminhada leve ou bike", "1", "30 min", "Confortavel", "Recuperar sem ficar parada.", "Esteira/Bike"),
-      ex("Alongamento e respiracao", "1", "12 min", "Leve", "Sono e recuperacao contam.", "Solo")
+    day("dom", "Domingo", "Recuperacao ativa + funcional leve", "Manter gasto calorico, reduzir estresse e chegar bem na proxima semana", "Leve", ["Caminhada na esteira ou bike leve 30 min", "Depois: mobilidade e respiracao"], [
+      ex("Caminhada leve ou bike", "1", "30 min", "Confortavel", "Recuperar sem ficar parada.", "Esteira/Bike", "-"),
+      ex("Alongamento e respiracao", "1", "12 min", "Leve", "Sono e recuperacao contam.", "Solo", "-"),
+      ex("Prancha leve", "2", "20-30s", "Peso corporal", "Opcional, so se estiver bem recuperada.", "Solo", "30s")
     ], meals("Cafe completo leve", "Fruta", "Almoco equilibrado", "Opcional", "Sopa/salada proteica", "Preparar marmitas"))
   ],
   runs: [
@@ -85,8 +90,8 @@ function meals(cafe, lanche, almoco, pre, jantar, extra) {
   return { cafe, lanche, almoco, pre, jantar, extra };
 }
 
-function ex(name, sets, reps, load, tip, equipment) {
-  return { name, sets, reps, load, tip, equipment, demoUrl: demoUrlFor(name) };
+function ex(name, sets, reps, load, tip, equipment, rest = "30s") {
+  return { name, sets, reps, load, tip, equipment, rest, demoUrl: demoUrlFor(name) };
 }
 
 function run(title, dayLabel, steps, note) {
@@ -154,12 +159,12 @@ function renderWeek() {
       <h3>${day.title}</h3>
       <p><strong>Objetivo:</strong> ${day.focus}</p>
       <div class="day-block">
-        <strong>Corrida/cardio</strong>
+        <strong>1. Corrida/cardio</strong>
         <ul>${day.runPlan.map((item) => `<li>${item}</li>`).join("")}</ul>
       </div>
       <div class="day-block">
-        <strong>Aparelhos da academia</strong>
-        <ul>${day.exercises.map((exercise) => `<li>${exercise.name} <span>${exercise.equipment}</span></li>`).join("")}</ul>
+        <strong>2. Musculacao/funcional complementar</strong>
+        <ul>${day.exercises.map((exercise) => `<li>${exercise.name}: ${exercise.sets}x ${exercise.reps}, ${exercise.load} <span>${exercise.equipment}</span></li>`).join("")}</ul>
       </div>
     </article>
   `).join("");
@@ -183,9 +188,14 @@ function renderStrength() {
         <div>
           <span class="date">${day.label}</span>
           <h3>${day.title}</h3>
+          <p>${day.focus}</p>
         </div>
         <span class="tag">${day.runType}</span>
       </header>
+      <div class="training-context">
+        <strong>Antes da musculacao:</strong>
+        <span>${day.runPlan.join(" + ")}</span>
+      </div>
       ${day.exercises.map((exercise) => `
         <div class="exercise">
           <div>
@@ -195,6 +205,7 @@ function renderStrength() {
               <span class="mini">${exercise.equipment}</span>
               <span class="mini">${exercise.sets} series</span>
               <span class="mini">${exercise.reps}</span>
+              <span class="mini">Descanso ${exercise.rest}</span>
               <a class="demo-link" href="${exercise.demoUrl}" target="_blank" rel="noopener noreferrer">Ver demonstracao</a>
             </div>
           </div>
