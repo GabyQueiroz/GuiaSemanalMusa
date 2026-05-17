@@ -123,6 +123,7 @@ main {
 }
 
 .week-card, .meal-card, .run-card, .supp-card, .panel { padding: 18px; }
+.week-card-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 10px; }
 .date { color: var(--muted); font-size: 13px; font-weight: 700; }
 .tag, .mini {
   display: inline-flex;
@@ -141,6 +142,33 @@ main {
   border-radius: 8px;
   background: #e9fbfb;
   line-height: 1.45;
+}
+
+.day-block {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7fdfd;
+}
+
+.day-block strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+}
+
+.day-block ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.day-block span {
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .training-list { display: grid; gap: 18px; }
