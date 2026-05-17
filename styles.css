@@ -223,14 +223,20 @@ main {
 .demo-link {
   display: inline-flex;
   align-items: center;
-  padding: 4px 8px;
+  min-height: 30px;
+  padding: 6px 10px;
   border: 1px solid var(--accent-dark);
   border-radius: 999px;
-  color: var(--accent-dark);
-  background: #fff;
+  color: #fff;
+  background: var(--accent-dark);
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.demo-link::before {
+  content: "▶";
+  margin-right: 6px;
 }
 
 .meal-block { margin-top: 12px; }

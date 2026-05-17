@@ -200,7 +200,7 @@ function renderStrength() {
               <span class="mini">${exercise.sets} series</span>
               <span class="mini">${exercise.reps}</span>
               <span class="mini">Descanso ${exercise.rest}</span>
-              <a class="demo-link" href="${exercise.demoUrl}" target="_blank" rel="noopener noreferrer">Ver demonstracao</a>
+              <a class="demo-link" href="${exercise.demoUrl}" target="_blank" rel="noopener noreferrer">Ver video no YouTube</a>
             </div>
           </div>
           <div class="weight-box"><strong>Carga/intensidade:</strong><br>${exercise.load}</div>
@@ -476,7 +476,31 @@ function imageFileToDataUrl(file) {
 }
 
 function demoUrlFor(name) {
-  return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${name} execucao correta`)}`;
+  const demos = [
+    ["Puxada alta na polia", "puxada alta na polia execucao correta"],
+    ["Chest press", "chest press maquina execucao correta"],
+    ["Triceps na polia", "triceps na polia execucao correta"],
+    ["Remada unilateral no banco", "remada unilateral com halter no banco execucao correta"],
+    ["Cadeira extensora", "cadeira extensora execucao correta"],
+    ["Cadeira flexora sentada", "cadeira flexora sentada execucao correta"],
+    ["Abdutora", "cadeira abdutora execucao correta"],
+    ["Adutora", "cadeira adutora execucao correta"],
+    ["Panturrilha em pe", "panturrilha em pe execucao correta"],
+    ["Dead bug", "dead bug exercicio execucao correta"],
+    ["Prancha lateral", "prancha lateral execucao correta"],
+    ["Prancha", "prancha abdominal execucao correta"],
+    ["Mobilidade de quadril", "mobilidade quadril tornozelo corrida"],
+    ["Mobilidade pre-corrida", "mobilidade antes da corrida aquecimento"],
+    ["Alongamento pos-corrida", "alongamento depois da corrida panturrilha posterior"],
+    ["Alongamento de panturrilha", "alongamento panturrilha posterior depois corrida"],
+    ["Alongamento geral", "alongamento corpo todo pos treino"],
+    ["Bike spinning", "como usar bike spinning iniciante"],
+    ["Caminhada leve ou bike", "caminhada na esteira iniciante postura"],
+    ["Descanso", "recuperacao muscular descanso treino corrida"]
+  ];
+  const found = demos.find(([needle]) => name.toLowerCase().includes(needle.toLowerCase()));
+  const query = found ? found[1] : `${name} execucao correta`;
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
 }
 
 function escapeHtml(value) {
